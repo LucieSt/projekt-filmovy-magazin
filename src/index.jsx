@@ -1,24 +1,27 @@
 import React from 'react';
 import { createRoot } from 'react-dom/client';
+import { createBrowserRouter, Outlet } from 'react-router-dom';
+import Home from './Components/Home/home';
+import Articles from './Components/Articles/articles';
+import Movies from './Components/Movies/movies';
+import Reviews from './Components/Reviews/reviews';
 import './style.css';
 
 const App = () => {
   return (
     <div className="container">
-      <header>
-        <div className="logo" />
-        <h1>React webová aplikace</h1>
-      </header>
+
+      <nav className="menu">
+        <a href="index.html" className="active">Home</a>
+        <a href="reviews.html">Reviews</a>
+        <a href="articles.html">Articles</a>
+        <a href="movies.html">Movies</a>
+      </nav>
+
       <main>
-        <p>
-          Startovací šablona pro webovou aplikaci v Reactu. Vytvořeno pomocí
-          <a href="https://www.npmjs.com/package/create-czechitas-app">create-czechitas-app</a>
-          .
-        </p>
+        <Outlet />
       </main>
-      <footer>
-        <p>Czechitas, Digitální akademie: Web</p>
-      </footer>
+
     </div>
   );
 };
