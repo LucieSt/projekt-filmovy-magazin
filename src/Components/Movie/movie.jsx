@@ -10,7 +10,7 @@ const Movie = () => {
 
 	return (
 		<div className="movie">
-			<img src={movie.poster} alt={movie.title}/>
+			<img src={movie.poster} alt={movie.title} />
 			<h2>{movie.title}</h2>
 			<p>({movie.year})</p>
 			<h3>{movie.director}</h3>
@@ -23,7 +23,7 @@ const Movie = () => {
 			</ul>
 
 			<p><b>Genre</b>: {movie.genre}</p>
-			<p><b>Rating</b>: {movie.rating*10}%</p>
+			<p><b>Rating</b>: {movie.rating * 10}%</p>
 
 		</div>
 	)
