@@ -1,5 +1,5 @@
 import React from "react";
-import { Link } from "react-router-dom";
+import { NavLink } from "react-router-dom";
 import { movies } from "./../../movie-database.js"
 import './style.css';
 
@@ -8,7 +8,7 @@ const MovieList = () => {
 		<nav className="movie-list">
 			{movies.map((movie) => {
 				const movieUrl = `/movies/${movie.id}`;
-				return <Link key={movie.id} to={movieUrl}>{movie.title}</Link>
+				return <NavLink key={movie.id} to={movieUrl}>{movie.title}</NavLink>
 			})}
 		</nav>
 	)

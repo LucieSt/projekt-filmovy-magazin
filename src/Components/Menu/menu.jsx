@@ -1,14 +1,14 @@
 import React from "react";
-import { Link } from "react-router-dom";
+import { NavLink } from "react-router-dom";
 import './style.css';
 
 const Menu = () => {
 	return (
 		<nav className="menu">
-			<Link to="/">Home</Link>
-			<Link to="/reviews">Reviews</Link>
-			<Link to="/articles">Articles</Link>
-			<Link to="/movies">Movies</Link>
+			<NavLink to="/">Home</NavLink>
+			<NavLink to="/reviews">Reviews</NavLink>
+			<NavLink to="/articles">Articles</NavLink>
+			<NavLink to="/movies">Movies</NavLink>
 		</nav>
 	)
 };
